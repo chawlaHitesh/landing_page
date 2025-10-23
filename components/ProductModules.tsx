@@ -23,11 +23,11 @@ const ProductModules = () => {
   ]
 
   return (
-    <section className="bg-[#F8F9F8] py-20 px-4 sm:px-8 md:px-16 lg:px-24">
-      <div className="max-w-6xl mx-auto">
+    <section className="bg-encora-gray section-spacing">
+      <div className="container-encora">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#194C4D] mb-4">Core Platform Modules</h2>
-          <p className="text-lg text-[#1F1F1F] font-light max-w-2xl mx-auto">
+          <h2 className="heading-lg mb-4">Core Platform Modules</h2>
+          <p className="body-text-lg max-w-2xl mx-auto">
             Encora's modular architecture gives you the flexibility to build the returns solution that fits your
             business.
           </p>
@@ -37,11 +37,13 @@ const ProductModules = () => {
           {modules.map((module, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow border border-[#E0E0E0]"
+              className="card-module group hover:scale-105 transition-all duration-300"
             >
-              <div className="text-4xl mb-4">{module.icon}</div>
-              <h3 className="text-xl font-bold text-[#194C4D] mb-3">{module.title}</h3>
-              <p className="text-[#1F1F1F] font-light">{module.description}</p>
+              <div className="icon-container mb-4 group-hover:bg-encora-mint group-hover:text-white transition-all">
+                <span className="text-3xl">{module.icon}</span>
+              </div>
+              <h3 className="text-xl font-bold text-encora-green mb-3">{module.title}</h3>
+              <p className="body-text">{module.description}</p>
             </div>
           ))}
         </div>

@@ -2,32 +2,92 @@ import Link from "next/link"
 
 export default function Hero() {
   return (
-    <section className="bg-white text-center py-20 px-4 sm:px-8 md:px-16 lg:px-24">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="font-sans text-4xl tracking-tight sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#194C4D] mb-6">
-          Smart Return Infrastructure
+    <section className="relative bg-gradient-to-br from-white via-encora-gray to-white min-h-[90vh] flex items-center overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 -right-40 w-80 h-80 bg-encora-mint/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 -left-40 w-96 h-96 bg-encora-green/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-encora-mint/5 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="container-encora relative z-10 px-4 sm:px-8 text-center">
+        {/* Announcement badge */}
+        <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 bg-white border border-encora-mint/30 rounded-full shadow-sm animate-fade-in">
+          <span className="flex items-center justify-center w-2 h-2 bg-encora-mint rounded-full animate-pulse"></span>
+          <span className="text-sm font-medium text-encora-green">Trusted by leading retailers worldwide</span>
+        </div>
+
+        {/* Main headline with gradient */}
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-in">
+          <span className="block text-encora-green leading-tight">Smart Return</span>
+          <span className="block bg-gradient-to-r from-encora-green via-encora-mint to-encora-green bg-clip-text text-transparent leading-tight">
+            Infrastructure
+          </span>
         </h1>
-        <p className="text-lg sm:text-xl text-[#1F1F1F] mb-4 font-light">
-          Encora transforms product returns into sustainable value. Reduce labor costs, minimize shrink, and maximize
-          compliance with our intelligent platform.
-        </p>
-        <p className="text-base sm:text-lg text-[#6CC7A1] mb-12 font-medium">
-          Trusted by leading retailers and brands worldwide
+
+        {/* Subheading */}
+        <p className="text-xl sm:text-2xl text-encora-text/80 mb-4 max-w-3xl mx-auto font-light leading-relaxed animate-slide-up">
+          Transform product returns into sustainable value. Reduce labor costs, minimize shrink, and maximize compliance with intelligent automation.
         </p>
 
-        <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
+        {/* Key value props */}
+        <div className="flex flex-wrap justify-center gap-6 mb-12 text-sm sm:text-base text-encora-green/70 animate-slide-up">
+          <div className="flex items-center gap-2">
+            <svg className="w-5 h-5 text-encora-mint" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+            </svg>
+            <span className="font-medium">40% Faster Processing</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <svg className="w-5 h-5 text-encora-mint" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+            </svg>
+            <span className="font-medium">Compliance Ready</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <svg className="w-5 h-5 text-encora-mint" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+            </svg>
+            <span className="font-medium">25% Better Recovery</span>
+          </div>
+        </div>
+
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 animate-slide-up mb-12">
           <Link
             href="/pilot"
-            className="bg-[#194C4D] text-white px-8 py-3 rounded-lg text-base font-semibold hover:bg-[#0F3536] transition duration-300 shadow-md"
+            className="group btn-primary inline-flex items-center justify-center gap-2"
           >
             Request a Pilot
+            <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
           </Link>
           <Link
             href="/docs"
-            className="border-2 border-[#6CC7A1] text-[#194C4D] px-8 py-3 rounded-lg text-base font-semibold hover:bg-[#F8F9F8] transition duration-300"
+            className="group btn-secondary inline-flex items-center justify-center gap-2"
           >
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            </svg>
             Developer Docs
           </Link>
+        </div>
+
+        {/* Social proof / Stats */}
+        <div className="flex flex-wrap justify-center gap-8 sm:gap-12 pt-8 border-t border-encora-green/10 animate-fade-in">
+          <div className="text-center">
+            <div className="text-3xl sm:text-4xl font-bold text-encora-green mb-1">500K+</div>
+            <div className="text-sm text-encora-text/60">Returns Processed</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl sm:text-4xl font-bold text-encora-green mb-1">50+</div>
+            <div className="text-sm text-encora-text/60">Enterprise Clients</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl sm:text-4xl font-bold text-encora-green mb-1">99.9%</div>
+            <div className="text-sm text-encora-text/60">Uptime SLA</div>
+          </div>
         </div>
       </div>
     </section>

@@ -1,29 +1,41 @@
-"use client";
+"use client"
 
-import { useEffect, useState } from "react";
-import { useTheme } from "next-themes";
-import { AiOutlineSun, AiOutlineMoon } from "react-icons/ai";
+import { useEffect, useState } from "react"
+import { useTheme } from "next-themes"
+import { AiOutlineSun, AiOutlineMoon } from "react-icons/ai"
 
 const ThemeSwitch = () => {
-  const [mounted, setMounted] = useState(false);
-  const { theme, setTheme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false)
+  const { theme, setTheme, resolvedTheme } = useTheme()
 
-  // When mounted on client, now we can show the UI
-  useEffect(() => setMounted(true), []);
+  useEffect(() => setMounted(true), [])
 
   if (!mounted) {
-    return null;
+    return (
+      <div className="w-10 h-10 rounded-lg bg-encora-gray animate-pulse"></div>
+    )
   }
+
+  const isDark = theme === "dark" || resolvedTheme === "dark"
 
   return (
     <button
-      onClick={() => setTheme(theme === "dark" || resolvedTheme === "dark" ? "light" : "dark")}
-      className="p-2 text-gray-800 dark:text-gray-200 bg-transparent dark:bg-black"
+      onClick={() => setTheme(isDark ? "light" : "dark")}
+      className="relative p-2 rounded-lg bg-encora-gray dark:bg-encora-mint/20 text-encora-green dark:text-white hover:bg-encora-mint/20 dark:hover:bg-encora-mint/30 transition-all duration-300 group"
       aria-label="Toggle Dark Mode"
     >
-      {theme === "dark" || resolvedTheme === "dark" ? <AiOutlineSun size={20} /> : <AiOutlineMoon size={20} />}
+      <div className="relative w-6 h-6">
+        <AiOutlineSun
+          className={`absolute inset-0 w-6 h-6 transition-all duration-300 ${isDark ? 'opacity-0 rotate-90 scale-0' : 'opacity-100 rotate-0 scale-100'
+            }`}
+        />
+        <AiOutlineMoon
+          className={`absolute inset-0 w-6 h-6 transition-all duration-300 ${isDark ? 'opacity-100 rotate-0 scale-100' : 'opacity-0 -rotate-90 scale-0'
+            }`}
+        />
+      </div>
     </button>
-  );
-};
+  )
+}
 
-export default ThemeSwitch;
+export default ThemeSwitch

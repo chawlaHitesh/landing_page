@@ -4,6 +4,7 @@ import ProductModules from "components/ProductModules"
 import Solutions from "components/Solutions"
 import ResultsBand from "components/ResultsBand"
 import Footer from "components/Footer"
+import AISection from "components/AISection"
 
 export default function Page() {
   return (
@@ -12,6 +13,7 @@ export default function Page() {
       <main>
         <Hero />
         <ProductModules />
+        <AISection />
         <Solutions />
         <ResultsBand />
       </main>

@@ -3,17 +3,19 @@ import ThemeSwitch from "./ThemeSwitch"
 
 export default function Header() {
   return (
-    <header className="bg-white dark:bg-[#194C4D] shadow-sm dark:border-b dark:border-[#6CC7A1]">
+    <header className="bg-white dark:bg-encora-green shadow-sm dark:border-b dark:border-encora-mint sticky top-0 z-50 backdrop-blur-sm bg-white/95 dark:bg-encora-green/95">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div className="flex items-center">
-          <span className="text-xl font-bold text-[#194C4D] dark:text-white">Encora</span>
+          <Link href="/" className="text-xl font-bold text-encora-green dark:text-white tracking-tight hover:text-encora-green-dark transition-colors">
+            Encora
+          </Link>
         </div>
-        <nav className="flex items-center">
-          <ul className="flex space-x-2 mr-2">
+        <nav className="flex items-center gap-6">
+          <ul className="hidden md:flex space-x-2">
             <li>
               <Link
                 href="/"
-                className="text-sm text-[#1F1F1F] dark:text-white px-4 py-2 rounded-md hover:bg-[#F8F9F8] dark:hover:bg-[#6CC7A1] dark:hover:text-[#194C4D] transition-colors"
+                className="text-sm text-encora-text dark:text-white px-4 py-2 rounded-lg hover:bg-encora-gray dark:hover:bg-encora-mint dark:hover:text-encora-green transition-all duration-300 font-medium"
               >
                 Home
               </Link>
@@ -21,7 +23,7 @@ export default function Header() {
             <li>
               <Link
                 href="/contact"
-                className="text-sm text-[#1F1F1F] dark:text-white px-4 py-2 rounded-md hover:bg-[#F8F9F8] dark:hover:bg-[#6CC7A1] dark:hover:text-[#194C4D] transition-colors"
+                className="text-sm text-encora-text dark:text-white px-4 py-2 rounded-lg hover:bg-encora-gray dark:hover:bg-encora-mint dark:hover:text-encora-green transition-all duration-300 font-medium"
               >
                 Contact
               </Link>

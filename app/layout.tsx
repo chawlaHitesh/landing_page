@@ -3,24 +3,26 @@ import type { Metadata } from "next"
 import { ThemeProvider } from "next-themes"
 import { Roboto, Roboto_Mono } from "next/font/google"
 
-import "styles/globals.css";
+import "styles/globals.css"
 
 const roboto = Roboto({
   subsets: ["latin"],
   weight: ["300", "400", "500", "700"],
   variable: "--font-roboto",
+  display: "swap",
 })
 
 const robotoMono = Roboto_Mono({
   subsets: ["latin"],
-  weight: ["400", "500"],
+  weight: ["400", "500", "700"],
   variable: "--font-roboto-mono",
+  display: "swap",
 })
 
 export const metadata: Metadata = {
   title: "Encora - Smart Return Infrastructure",
-  description: "Encora: Smart Return Infrastructure Platform",
-  generator: 'v0.app'
+  description: "Transform product returns into sustainable value. Reduce labor costs, minimize shrink, and maximize compliance with intelligent automation.",
+  keywords: "returns management, reverse logistics, sustainability, compliance, retail technology",
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -29,8 +31,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </head>
-      <body className={`${roboto.variable} ${robotoMono.variable} bg-white dark:bg-[#194C4D] min-h-screen font-sans`}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+      <body className={`${roboto.variable} ${robotoMono.variable} bg-white dark:bg-encora-green min-h-screen font-sans antialiased`}>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           {children}
         </ThemeProvider>
       </body>
