@@ -8,8 +8,7 @@ import Footer from "components/Footer"
 
 export default function Page() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <Header />
+   
       <main className="bg-white dark:bg-encora-green">
         <Hero />
         <ProductModules />
@@ -17,7 +16,6 @@ export default function Page() {
         <Solutions />
         <ResultsBand />
       </main>
-      <Footer />
-    </div>
+     
   )
 }

@@ -5,6 +5,9 @@ import { Roboto, Roboto_Mono } from "next/font/google"
 
 import "styles/globals.css"
 import 'styles/animations.css'
+import Header from "components/Header"
+import Footer from "components/Footer"
+
 const roboto = Roboto({
   subsets: ["latin"],
   weight: ["300", "400", "500", "700"],
@@ -33,7 +36,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className={`${roboto.variable} ${robotoMono.variable} min-h-screen font-sans antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+        <div className="flex flex-col min-h-screen">
+        <Header />
+        
           {children}
+          <Footer />
+          </div>
+        
         </ThemeProvider>
       </body>
     </html>
