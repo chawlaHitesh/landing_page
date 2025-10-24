@@ -4,7 +4,7 @@ import { ThemeProvider } from "next-themes"
 import { Roboto, Roboto_Mono } from "next/font/google"
 
 import "styles/globals.css"
-
+import 'styles/animations.css'
 const roboto = Roboto({
   subsets: ["latin"],
   weight: ["300", "400", "500", "700"],
