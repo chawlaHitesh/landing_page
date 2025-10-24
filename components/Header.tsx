@@ -38,9 +38,41 @@ export default function Header() {
                 Home
               </Link>
             </li>
+             <li>
+              <Link
+                href="/solution"
+                className="text-sm text-encora-text dark:text-white px-4 py-2 rounded-lg hover:bg-encora-gray dark:hover:bg-encora-mint dark:hover:text-encora-green transition-all duration-300 font-medium"
+              >
+                Solutions
+              </Link>
+            </li>
             <li>
               <Link
-                href="/contact"
+                href="/encora-reuse"
+                className="text-sm text-encora-text dark:text-white px-4 py-2 rounded-lg hover:bg-encora-gray dark:hover:bg-encora-mint dark:hover:text-encora-green transition-all duration-300 font-medium"
+              >
+                Encora Reuse
+              </Link>
+            </li>
+             <li>
+              <Link
+                href="/encora-access"
+                className="text-sm text-encora-text dark:text-white px-4 py-2 rounded-lg hover:bg-encora-gray dark:hover:bg-encora-mint dark:hover:text-encora-green transition-all duration-300 font-medium"
+              >
+                Encora Access
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/blog-doc"
+                className="text-sm text-encora-text dark:text-white px-4 py-2 rounded-lg hover:bg-encora-gray dark:hover:bg-encora-mint dark:hover:text-encora-green transition-all duration-300 font-medium"
+              >
+               Blog/Docs
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/contact-us"
                 className="text-sm text-encora-text dark:text-white px-4 py-2 rounded-lg hover:bg-encora-gray dark:hover:bg-encora-mint dark:hover:text-encora-green transition-all duration-300 font-medium"
               >
                 Contact
@@ -92,24 +124,54 @@ export default function Header() {
 
         {/* Drawer Links */}
         <ul className="flex flex-col mt-4 space-y-2 px-4">
-          <li>
-            <Link
-              href="/"
-              onClick={() => setIsOpen(false)}
-              className="block text-sm text-encora-text dark:text-white px-4 py-2 rounded-lg hover:bg-encora-gray dark:hover:bg-encora-mint dark:hover:text-encora-green transition-all duration-300 font-medium"
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/contact"
-              onClick={() => setIsOpen(false)}
-              className="block text-sm text-encora-text dark:text-white px-4 py-2 rounded-lg hover:bg-encora-gray dark:hover:bg-encora-mint dark:hover:text-encora-green transition-all duration-300 font-medium"
-            >
-              Contact
-            </Link>
-          </li>
+           <li>
+              <Link
+                href="/"
+                className="text-sm text-encora-text dark:text-white px-4 py-2 rounded-lg hover:bg-encora-gray dark:hover:bg-encora-mint dark:hover:text-encora-green transition-all duration-300 font-medium"
+              >
+                Home
+              </Link>
+            </li>
+             <li>
+              <Link
+                href="/solution"
+                className="text-sm text-encora-text dark:text-white px-4 py-2 rounded-lg hover:bg-encora-gray dark:hover:bg-encora-mint dark:hover:text-encora-green transition-all duration-300 font-medium"
+              >
+                Solutions
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/encora-reuse"
+                className="text-sm text-encora-text dark:text-white px-4 py-2 rounded-lg hover:bg-encora-gray dark:hover:bg-encora-mint dark:hover:text-encora-green transition-all duration-300 font-medium"
+              >
+                Encora Reuse
+              </Link>
+            </li>
+             <li>
+              <Link
+                href="/encora-access"
+                className="text-sm text-encora-text dark:text-white px-4 py-2 rounded-lg hover:bg-encora-gray dark:hover:bg-encora-mint dark:hover:text-encora-green transition-all duration-300 font-medium"
+              >
+                Encora Access
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/blog-doc"
+                className="text-sm text-encora-text dark:text-white px-4 py-2 rounded-lg hover:bg-encora-gray dark:hover:bg-encora-mint dark:hover:text-encora-green transition-all duration-300 font-medium"
+              >
+               Blog/Docs
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/contact-us"
+                className="text-sm text-encora-text dark:text-white px-4 py-2 rounded-lg hover:bg-encora-gray dark:hover:bg-encora-mint dark:hover:text-encora-green transition-all duration-300 font-medium"
+              >
+                Contact
+              </Link>
+            </li>
         </ul>
       </div>
     </header>
