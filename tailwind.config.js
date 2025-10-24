@@ -79,7 +79,8 @@ module.exports = {
           dark: '#5AB88F'
         },
         'encora-gray': '#F8F9F8',
-        'encora-text': '#1F1F1F'
+        'encora-text': '#1F1F1F',
+        'encora-green-dark': '#163F40'
       },
       borderRadius: {
         lg: 'var(--radius)',
