@@ -1,11 +1,14 @@
 "use client"
 import Link from "next/link"
+import Image from "next/image"
 import { useEffect, useState } from "react"
+import { useTheme } from "next-themes"
 import ThemeSwitch from "./ThemeSwitch"
 import { Menu, X } from "lucide-react"
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
+  const { theme } = useTheme()
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden"
@@ -22,9 +25,16 @@ export default function Header() {
         {/* Logo */}
         <Link
           href="/"
-          className="text-xl font-bold text-encora-green dark:text-white tracking-tight hover:text-encora-green-dark transition-colors"
+          className="flex items-center hover:opacity-80 transition-opacity"
         >
-          Encora
+          <Image
+            src={theme === "dark" ? "/encora_light_logo.png" : "/encora_dark_logo.png"}
+            alt="Encora Logo"
+            width={120}
+            height={40}
+            className="h-8 w-auto"
+            priority
+          />
         </Link>
 
         {/* Desktop Nav */}

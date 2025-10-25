@@ -49,7 +49,7 @@ export default function Hero() {
         <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 bg-white dark:bg-white/10 border border-encora-mint/30 dark:border-encora-mint/50 rounded-full shadow-sm backdrop-blur-sm animate-on-scroll hover:scale-105 transition-transform duration-300 cursor-pointer group">
           <span className="flex items-center justify-center w-2 h-2 bg-encora-mint rounded-full animate-ping-slow"></span>
           <span className="text-sm font-medium text-encora-green dark:text-white group-hover:text-encora-green-dark dark:group-hover:text-encora-mint transition-colors">
-            Trusted by leading retailers worldwide
+          Building a Greener Future, One Scan at a Time
           </span>
         </div>
 
@@ -57,10 +57,10 @@ export default function Hero() {
         <div className="animate-on-scroll">
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6">
             <span className="block text-encora-green dark:text-white leading-tight animate-text-focus">
-              Smart Return
+            Scan It For 
             </span>
             <span className="block bg-gradient-to-r from-encora-green via-encora-mint to-encora-green dark:from-encora-mint dark:via-white dark:to-encora-mint bg-clip-text text-transparent leading-tight animate-gradient-flow bg-[length:200%_auto]">
-              Infrastructure
+            The Planet
             </span>
           </h1>
         </div>
@@ -68,16 +68,15 @@ export default function Hero() {
         {/* Subheading with staggered animation */}
         <div className="animate-on-scroll">
           <p className="text-xl sm:text-2xl text-encora-text/80 dark:text-white/80 mb-4 max-w-3xl mx-auto font-light leading-relaxed">
-            Transform product returns into sustainable value. Reduce labor costs, minimize shrink, and maximize compliance with intelligent automation.
-          </p>
+          Encora's patent pending enterprise smart collection system for reusable food and beverage containers are safe, healthy and the most sustainable way to enjoy takeout food.          </p>
         </div>
 
         {/* Key value props with staggered animation */}
         <div className="flex flex-wrap justify-center gap-6 mb-12 text-sm sm:text-base text-encora-green/70 dark:text-encora-mint">
           {[
-            { text: "40% Faster Processing" },
-            { text: "Compliance Ready" },
-            { text: "25% Better Recovery" }
+            { text: "Safe & Hygienic Containers" },
+            { text: "Smart Reuse for Takeout" },
+            { text: "Sustainable & Eco-Friendly" }
           ].map((item, index) => (
             <div
               key={index}
@@ -100,13 +99,13 @@ export default function Hero() {
             style={{ animationDelay: '300ms' }}
           >
             <span className="relative overflow-hidden">
-              <span className="block group-hover:animate-pulse">Request a Pilot</span>
+              <span className="block group-hover:animate-pulse">Get Started</span>
             </span>
             <svg className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300 group-hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
           </Link>
-          <Link
+          {/* <Link
             href="/docs"
             className="group border-2 border-encora-mint dark:border-white text-encora-green dark:text-white px-8 py-3 rounded-lg text-base font-semibold hover:bg-encora-gray dark:hover:bg-white/10 transition-all duration-500 inline-flex items-center justify-center gap-2 animate-on-scroll hover:scale-105 transform hover:-translate-y-1"
             style={{ animationDelay: '400ms' }}
@@ -117,11 +116,11 @@ export default function Hero() {
             <span className="relative overflow-hidden">
               <span className="block group-hover:animate-pulse">Developer Docs</span>
             </span>
-          </Link>
+          </Link> */}
         </div>
 
         {/* Social proof / Stats with counting animation */}
-        <div className="flex flex-wrap justify-center gap-8 sm:gap-12 pt-8 border-t border-encora-green/10 dark:border-white/20">
+        {/* <div className="flex flex-wrap justify-center gap-8 sm:gap-12 pt-8 border-t border-encora-green/10 dark:border-white/20">
           {[
             { number: "500K+", label: "Returns Processed" },
             { number: "50+", label: "Enterprise Clients" },
@@ -138,7 +137,7 @@ export default function Hero() {
               <div className="text-sm text-encora-text/60 dark:text-white/60">{stat.label}</div>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   )

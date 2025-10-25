@@ -32,16 +32,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.png" type="image/png" />
       </head>
       <body className={`${roboto.variable} ${robotoMono.variable} min-h-screen font-sans antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-h-screen w-full">
         <Header />
-        
+        <main className="flex-1 w-full">
           {children}
-          <Footer />
-          </div>
+        </main>
+        <Footer />
+        </div>
         
         </ThemeProvider>
       </body>
