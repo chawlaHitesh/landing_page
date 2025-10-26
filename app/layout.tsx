@@ -26,6 +26,12 @@ export const metadata: Metadata = {
   title: "Encora - Smart Return Infrastructure",
   description: "Transform product returns into sustainable value. Reduce labor costs, minimize shrink, and maximize compliance with intelligent automation.",
   keywords: "returns management, reverse logistics, sustainability, compliance, retail technology",
+  ...(process.env.NEXT_PUBLIC_MODE === 'development' && {
+    robots: {
+      index: false,
+      follow: false,
+    },
+  }),
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
