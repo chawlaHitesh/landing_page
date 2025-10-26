@@ -46,7 +46,7 @@ export default function Hero() {
 
       <div className="container-encora relative z-10 px-4 sm:px-8 text-center">
         {/* Announcement badge with enhanced animation */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 bg-white dark:bg-white/10 border border-encora-mint/30 dark:border-encora-mint/50 rounded-full shadow-sm backdrop-blur-sm animate-on-scroll hover:scale-105 transition-transform duration-300 cursor-pointer group">
+        <div className="invisible md:visible md:inline-flex  items-center gap-2 px-4 py-2 mb-8 bg-white dark:bg-white/10 border border-encora-mint/30 dark:border-encora-mint/50 rounded-full shadow-sm backdrop-blur-sm animate-on-scroll hover:scale-105 transition-transform duration-300 cursor-pointer group ">
           <span className="flex items-center justify-center w-2 h-2 bg-encora-mint rounded-full animate-ping-slow"></span>
           <span className="text-sm font-medium text-encora-green dark:text-white group-hover:text-encora-green-dark dark:group-hover:text-encora-mint transition-colors">
           Building a Greener Future, One Scan at a Time

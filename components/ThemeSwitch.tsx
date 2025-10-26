@@ -5,16 +5,7 @@ import { useTheme } from "next-themes"
 import { AiOutlineSun, AiOutlineMoon } from "react-icons/ai"
 
 const ThemeSwitch = () => {
-  const [mounted, setMounted] = useState(false)
   const { theme, setTheme, resolvedTheme } = useTheme()
-
-  useEffect(() => setMounted(true), [])
-
-  if (!mounted) {
-    return (
-      <div className="w-10 h-10 rounded-lg bg-encora-gray animate-pulse"></div>
-    )
-  }
 
   const isDark = theme === "dark" || resolvedTheme === "dark"
 
