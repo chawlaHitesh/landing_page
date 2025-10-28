@@ -1,5 +1,6 @@
 "use client"
 import Link from "next/link"
+import Image from "next/image"
 import { useEffect, useRef } from "react"
 
 export default function Hero() {
@@ -30,10 +31,22 @@ export default function Hero() {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-gradient-to-br from-white via-encora-gray to-white dark:from-encora-green dark:via-encora-green-dark dark:to-encora-green min-h-[90vh] flex items-center overflow-hidden"
+      className="relative min-h-[90vh] flex items-center overflow-hidden"
     >
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/image/hero.jpeg"
+          alt="Hero Background"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/30 dark:bg-black/50"></div>
+      </div>
+
       {/* Enhanced Background decorative elements with animations */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden z-10">
         <div className="absolute top-20 -right-40 w-80 h-80 bg-encora-mint/10 dark:bg-encora-mint/20 rounded-full blur-3xl animate-float-slow"></div>
         <div className="absolute bottom-20 -left-40 w-96 h-96 bg-encora-green/5 dark:bg-white/5 rounded-full blur-3xl animate-float-medium"></div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-encora-mint/5 dark:bg-encora-mint/10 rounded-full blur-3xl animate-pulse-slow"></div>
@@ -44,7 +57,7 @@ export default function Hero() {
         <div className="absolute top-2/3 right-1/4 w-2 h-2 bg-encora-mint/50 rounded-full animate-bounce-fast delay-500"></div>
       </div>
 
-      <div className="container-encora relative z-10 px-4 sm:px-8 text-center">
+      <div className="container-encora relative z-20 px-4 sm:px-8 text-center">
         {/* Announcement badge with enhanced animation */}
         <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 bg-white dark:bg-white/10 border border-encora-mint/30 dark:border-encora-mint/50 rounded-full shadow-sm backdrop-blur-sm animate-on-scroll hover:scale-105 transition-transform duration-300 cursor-pointer group">
           <span className="flex items-center justify-center w-2 h-2 bg-encora-mint rounded-full animate-ping-slow"></span>
@@ -56,7 +69,7 @@ export default function Hero() {
         {/* Main headline with enhanced gradient animation */}
         <div className="animate-on-scroll">
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6">
-            <span className="block text-encora-green dark:text-white leading-tight animate-text-focus">
+            <span className="block text-gray-800 dark:text-white leading-tight animate-text-focus">
             Scan It For 
             </span>
             <span className="block bg-gradient-to-r from-encora-green via-encora-mint to-encora-green dark:from-encora-mint dark:via-white dark:to-encora-mint bg-clip-text text-transparent leading-tight animate-gradient-flow bg-[length:200%_auto]">
